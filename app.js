@@ -113,6 +113,8 @@ function searchAlbums() {
 }
 
 // Sort albums
+//INTENTIONALLY BROKEN TO TEST GITHUB RULESET FUNCTIONALITY
+/*
 function sortAlbums() {
     const sortValue = sortBy.value;
 
@@ -129,6 +131,7 @@ function sortAlbums() {
         }
     });
 }
+*/
 
 // Attach event listeners
 function attachEventListeners() {
