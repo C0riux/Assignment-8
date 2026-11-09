@@ -1,0 +1,30 @@
+#Actions Tab Name
+name: CI
+
+#Trigger on any push/pull
+on: [push, pull_request]
+
+#Jobs
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    #1. Checkout Code
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    #2. Install Node.js 18
+    - name: Install Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    
+    #3. Install Packages
+    - name: Install dependencies
+      run: npm install
+    
+    #4. Run Test Suite
+    - name: Run tests
+      run: npm test
